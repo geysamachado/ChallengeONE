@@ -1,107 +1,241 @@
-:root {
-    --cor-de-fundo: #F5F5F5;
-    --cor-de-fundo-menu: #F5F5F5;
-    --cor-do-link: #000000;
-}
-
-body {
-    background-color: var(--cor-de-fundo);
-    font-family: 'Raleway', sans-serif;
+* {
     margin: 0;
-    box-sizing: border-box;
     padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: 'Raleway', sans-serif;
     line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
 }
 
-ol, ul, li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: var(--cor-do-link);
-}
-
-/* ------------------------------ Seção Menu -------------------------------*/
+/* Cabeçalho */
 .cabecalho {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    background-color: var(--cor-de-fundo-menu);
-}
-
-.cabecalho__logo {
-    max-width: 80px; /* Ajuste para telas pequenas */
-}
-
-.cabecalho__titulo {
-    font-size: 1.2rem;
+    background-color: #000;
+    color: white;
+    padding: 1.5rem;
     text-align: center;
 }
 
+.cabecalho__titulo {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
 .navegacao__lista {
-    display: none;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
 }
 
 .navegacao__elemento a {
-    font-size: 0.9rem;
-}
-/* ------------------------------ Seção Apresentação ------------------------------*/
-
-
-/* ------------------------------ Seção Sobre mim ----------------------------------*/
-
-
-/*------------------------------ Seção de Habilidades ------------------------------*/
-
-
-/*------------------------------ Seção de Hobbies --------------------------------*/
-
-
-/*------------------------------ Seção de Projetos --------------------------------*/
-
-
-/*------------------------------ Seção de Contato ---------------------------------*/
-
-
-/* ------------------------------ Responsividade ---------------------------------------*/
-
-/* Tablets e telas maiores */
-@media (min-width: 768px) {
-    .cabecalho {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .cabecalho__logo {
-        max-width: 100px;
-    }
-
-    .cabecalho__titulo {
-        font-size: 1.5rem;
-    }
-
-    .navegacao__lista {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        margin-top: 0;
-    }
-
-    .navegacao__elemento a {
-        font-size: 1rem;
-    }
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-/* Telas grandes */
-@media (min-width: 1024px) {
-    .cabecalho__titulo {
-        font-size: 1.9rem;
-    }
+.navegacao__elemento a:hover {
+    color: #61dafb;
+}
 
-    .navegacao__elemento a {
-        font-size: 1.8rem;
-    }
+/* Apresentação */
+.apresentacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #f5f5f5;
+}
+
+.apresentacao__foto {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-right: 1.5rem;
+}
+
+/* Seção "Sobre mim" */
+.sobre-mim {
+    padding: 2rem;
+    text-align: center;
+}
+
+.sobre-mim__titulo {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.sobre-mim__texto {
+    font-size: 1rem;
+    color: #000;
+}
+
+/* Seção "Habilidades" */
+.habilidades {
+    padding: 2rem;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.habilidades__titulo {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.habilidades__lista {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.habilidades__elemento {
+    text-align: center;
+    max-width: 120px;
+}
+
+.habilidades__icone {
+    width: 80px;
+    height: 80px;
+}
+
+/* Seção "Hobbies" */
+.hobbies {
+    padding: 2rem;
+    text-align: center;
+}
+
+.hobbies__titulo {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.hobbies__lista {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.hobbies__icone {
+    width: 80px;
+    height: 80px;
+}
+
+/* Seção "Formação Acadêmica" */
+.formacao {
+    padding: 2rem;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.formacao__titulo {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.formacao__lista {
+    list-style: none;
+    padding: 1rem;
+}
+
+.formacao__elemento {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.formacao__icone {
+    width: 50px;
+    height: 50px;
+}
+
+.formacao__nome {
+    font-weight: bold;
+}
+
+.formacao__detalhe {
+    color: #555;
+}
+
+/* Seção "Projetos" */
+.projetos {
+    padding: 2rem;
+    text-align: center;
+}
+
+.projetos__titulo {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.projetos__conteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.projetos__nome {
+    font-weight: bold;
+}
+
+.projetos_descriçao {
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Seção "Contato" */
+.contato {
+    padding: 2rem;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.contato__titulo {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contato__formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contato__campo {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contato__campo--textarea {
+    height: 100px;
+}
+
+.contato__botao {
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #282c34;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contato__botao:hover {
+    background-color: #61dafb;
 }
